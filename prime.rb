@@ -1,15 +1,15 @@
 # Add  code here!
 def prime?(number)
-  k=2
-  flag=0
-  if  number > 1
-while k <= number/2
-    if number%k == 0
+k=2
+flag=0
+if  number > 1  # This condition to be sure the number not negative (there is no negative prime number)
+  while k <= number/2
+     if number%k == 0
      flag=1
      break;
-     end
-  k += 1
-  end
+     end  #-------- end of if
+     k += 1
+   end #--------end of while
 
   if flag == 0
     return true
@@ -18,6 +18,6 @@ while k <= number/2
   end
 else
   return false
+end #-------- end of first if
 end
-end
-  puts prime?(0)
+  # puts prime?(-1)
