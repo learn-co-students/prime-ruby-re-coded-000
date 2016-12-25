@@ -1,10 +1,7 @@
-def prime?(n)
-  range = 2 ..n -1
-  my_arr = range.to_a
-  if   my_arr.any? { |e| n%e ==0 } || n<=1
+def prime?(number)
+  if number <=1
     return false
-  else
-    return true
-
   end
+  numbers=(2..Math.sqrt(number)).to_a
+  numbers.all?{|n| number%n!=0}
 end
