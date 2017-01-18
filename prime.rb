@@ -2,10 +2,11 @@
 def prime?(number)
   if number <= 1
     return false
-    range= 2 .. Math.sprt(number)
-    my_range = range.to_i
+  end
+
+    range= 2 .. Math.sqrt(number)
+    my_range = range.to_a
     my_range.all? do |num|
       number% num !=0
     end
-  end
 end
